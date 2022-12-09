@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - Print weather number is negative or positive
+ * main - Print a random number weather is negative, positive or zero
  *
  * Return : Always 0 (Success)
  */
