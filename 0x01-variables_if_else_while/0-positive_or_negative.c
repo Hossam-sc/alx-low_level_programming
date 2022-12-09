@@ -4,7 +4,7 @@
 
 /**
  * main - Print weather number is negative or positive
- * 	
+ *
  * Return : Always 0 (Success)
  */
 int main(void)
