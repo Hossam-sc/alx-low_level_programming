@@ -5,9 +5,8 @@
 /**
  * main - Print a random number weather is negative, positive or zero
  *
- * Return : Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int n;
