@@ -9,18 +9,33 @@
  */
 void times_table(void)
 {
-	int N, M;
+	int N, M, Res;
 
 	for (N = 0; N <= 9; N++)
 	{
 		for (M = 0; M <= 9; M++)
 		{
-			_putchar((N * M) + '0');
+			Res = (N * M);
+			if (M != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (Res <= 10)
+			{
+				_putchar((Res / 10) + '0');
+				_putchar((Res % 10) + '0');
+			}
+			else if (Res < 10 && M != 0)
+			{
+				_putchar(' ')
+				_putchar((Res % 10) + '0');
+			}
+			else
+			{
+				_putchar((Res % 10) + '0');
+			}
 			_putchar('\n');
-			if (N == 9 && M == 8)
-				continue;
-			_putchar(',');
-			_putchar(' ');
 		}
 	}
 }
