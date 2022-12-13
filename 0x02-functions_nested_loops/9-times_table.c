@@ -20,12 +20,11 @@ void times_table(void)
 			_putchar(',');
 			_putchar(' ');
 			Res = N * M;
-			
 			if (Res <= 9)
 			{
 				_putchar(' ');
 			}
-			else 
+			else
 			{
 				_putchar((Res / 10) + '0');
 			}
