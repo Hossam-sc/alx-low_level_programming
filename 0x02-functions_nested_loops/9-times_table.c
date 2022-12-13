@@ -13,29 +13,24 @@ void times_table(void)
 
 	for (N = 0; N <= 9; N++)
 	{
-		for (M = 0; M <= 9; M++)
+		_putchar('0');
+
+		for (M = 1; M <= 9; M++)
 		{
-			Res = (N * M);
-			if (N != 0)
+			_putchar(',');
+			_putchar(' ');
+			Res = N * M;
+			
+			if (Res <= 9)
 			{
-				_putchar(',');
 				_putchar(' ');
 			}
-			if (Res <= 10)
+			else 
 			{
 				_putchar((Res / 10) + '0');
-				_putchar((Res % 10) + '0');
 			}
-			else if (Res < 10 && N != 0)
-			{
-				_putchar(' ');
-				_putchar((Res % 10) + '0');
-			}
-			else
-			{
-				_putchar((Res % 10) + '0');
-			}
-			_putchar('\n');
+			_putchar((Res % 10) + '0');
 		}
+		_putchar('\n');
 	}
 }
