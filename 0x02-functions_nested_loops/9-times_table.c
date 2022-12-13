@@ -16,7 +16,7 @@ void times_table(void)
 		for (M = 0; M <= 9; M++)
 		{
 			Res = (N * M);
-			if (M != 0)
+			if (N != 0)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -26,7 +26,7 @@ void times_table(void)
 				_putchar((Res / 10) + '0');
 				_putchar((Res % 10) + '0');
 			}
-			else if (Res < 10 && M != 0)
+			else if (Res < 10 && N != 0)
 			{
 				_putchar(' ');
 				_putchar((Res % 10) + '0');
