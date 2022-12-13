@@ -28,7 +28,7 @@ void times_table(void)
 			}
 			else if (Res < 10 && M != 0)
 			{
-				_putchar(' ')
+				_putchar(' ');
 				_putchar((Res % 10) + '0');
 			}
 			else
