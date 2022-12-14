@@ -16,28 +16,38 @@ void print_times_table(int n)
 		{
 			for (j = 0; j <= n; j++)
 			{
-				_putchar(',');
-				_putchar(' ');
 				Mult = (i * j);
-				if (Mult <= 9)
+				if (Mult <= 9 && j != 0)
 				{
+					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
+					_putchar(' ');
+					_putchar((Mult % 10) + '0');
 				}
 				else if (Mult <= 99)
 				{
+					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 					_putchar((Mult / 10) + '0');
+					_putchar((Mult % 10) + '0');
+				}
+				else if (Mult <= 255 && j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((Mult / 100) + '0');
+					_putchar((Mult / 10) + '0');
+					_putchar((Mult % 10) + '0');
 				}
 				else
 				{
-					_putchar((Mult / 100) + '0');
-					_putchar((Mult / 10) + '0');
+					_putchar((Mult % 10) + '0');
 				}
 			}
-			_putchar((Mult % 10) + '0');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
 
