@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_square -
+ * print_square - function that prints a square
  *@size: size of square
  * Return: void
  */
@@ -25,5 +25,4 @@ void print_square(int size)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
