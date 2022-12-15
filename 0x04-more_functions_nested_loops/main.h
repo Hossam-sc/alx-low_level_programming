@@ -31,4 +31,4 @@ long int biggestFactor(long int a);
 
 int numDigits(int n);
 
-#enfif
+#endif
