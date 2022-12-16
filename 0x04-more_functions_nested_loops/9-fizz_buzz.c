@@ -21,7 +21,7 @@ int main(void)
 		}
 		else if (i == 100)
 		{
-			printf("%s", A);
+			printf("%s", B);
 		}
 		else if (i % 5 == 0)
 		{
