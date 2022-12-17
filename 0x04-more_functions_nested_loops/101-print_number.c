@@ -8,37 +8,13 @@
 void print_number(int n)
 {
 	int i, j;
+
 	if (n < 0)
 	{
-		for (n = -1; n > -10000; n--)
-		{
-			if (n >= -1 && n > -10)
-			{
-				_putchar('-');
-				_putchar((n % 10) + '0');
-			}
-			else if (n <= -10 && n > -100)
-			{
-				_putchar('-');
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
-			else if (n <= -100 && n > -1000)
-			{
-				_putchar('-');
-				_putchar((n / 100) + '0');
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
-			else if (n <= -1000 && n > -10000)
-			{
-				_putchar('-');
-				_putchar((n / 1000) + '0');
-				_putchar((n / 100) + '0');
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
-		}
+		i = n * -1;
+		_putchar('-');
+		_putchar((n / 10) + '0');
+		_putchar((n % 10) + '0');
 		_putchar('\n');
 	}
 	else
@@ -65,7 +41,7 @@ void print_number(int n)
 				_putchar((n / 1000) + '0');
 				_putchar((n / 100) + '0');
 				_putchar((n / 10) + '0');
-				_putchar((n % 10) +'0');
+				_putchar((n % 10) + '0');
 			}
 			_putchar('\n');
 		}
