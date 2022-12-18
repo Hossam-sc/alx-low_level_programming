@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	double r = 0, a = 1, b = 2;
+	float r = 0, a = 1, b = 2;
 
 	printf("1, 2");
 	for (i = 1; i <= 96; i++)
@@ -17,7 +17,7 @@ int main(void)
 		r = a + b;
 		a = b;
 		b = r;
-		printf(", %.0g", r);
+		printf(", %.0f", r);
 	}
 	printf("\n");
 	return (0);
