@@ -17,7 +17,7 @@ int main(void)
 		r = a + b;
 		a = b;
 		b = r;
-		printf(", %g", r);
+		printf(", %.0g", r);
 	}
 	printf("\n");
 	return (0);
