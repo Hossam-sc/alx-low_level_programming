@@ -19,6 +19,6 @@ int main(void)
 		b = r;
 		printf(", %.0f", r);
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
