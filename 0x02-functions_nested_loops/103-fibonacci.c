@@ -9,7 +9,6 @@
  */
 int main(void)
 {
-	int i;
 	long a = 1, b = 2, r = 0, e = 2;
 
 	while (r < 4000000)
