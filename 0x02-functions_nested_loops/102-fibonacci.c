@@ -9,17 +9,16 @@
  */
 int main(void)
 {
-	int i, j;
+	int i;
+	long a = 1, b = 2, r = 0;
 
-	for (i = 1; i <= 50; i++)
+	printf("1, 2");
+	for (i = 1; i <= 48; i++)
 	{
-		if (i == 1)
-			printf("%d, ", i);
-		else if (i == 2)
-			printf("%d, ", i);
-		else
-			j = (i - 2) + (i - 1);
-		printf("%d, ", j);
+		r = a + b;
+		a = b;
+		b = r;
+		printf(", %ld", r);
 	}
 	printf("\n");
 	return (0);
