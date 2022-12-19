@@ -23,8 +23,8 @@ void rev_string(char *s)
 		for (m = j + 1; m > 0; m--)
 		{
 			temp = *(str + 1);
-			*(str + 1) = *(str + (j - 1));
-			*(str + (j - 1)) = temp;
+			*(str + 1) = *(str + (m - 1));
+			*(str + (m - 1)) = temp;
 		}
 	}
 }
