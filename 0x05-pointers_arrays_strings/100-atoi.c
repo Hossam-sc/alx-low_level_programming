@@ -9,7 +9,8 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, j = 1, sum = 0;
+	int i = 0, j = 1;
+	unsigned int sum = 0;
 
 	while (s[i] != '\0')
 	{
@@ -23,5 +24,5 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	return (sum);
+	return (sum * j);
 }
