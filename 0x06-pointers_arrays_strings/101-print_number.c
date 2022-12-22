@@ -7,9 +7,10 @@
  */
 void print_number(int n)
 {
-	int i = 10, j;
 	unsigned int m;
+	int i, j;
 
+	i = 10;
 	if (n >= 0 && n < 10)
 	{
 		_putchar(n + '0');
@@ -39,5 +40,4 @@ void print_number(int n)
 			i = i / 10;
 		}
 	}
-	return (n);
 }
