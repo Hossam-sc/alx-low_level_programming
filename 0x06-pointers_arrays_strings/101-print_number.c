@@ -39,4 +39,5 @@ void print_number(int n)
 			i = i / 10;
 		}
 	}
+	return (n);
 }
