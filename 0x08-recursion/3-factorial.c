@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * factorial(int n) - Entery point
+ * factorial - Entery point
  *@n : integr
  * Return: 0 Always
  */
