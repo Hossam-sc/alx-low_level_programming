@@ -3,51 +3,42 @@
 #include <stdio.h>
 
 /**
- * _strlen - function that returns the length of a string
- *@s: is the string
- * Return: length of the string
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	return (i);
-}
-/**
- * string_nconcat - function that concatenates two strings
+ * *string_nconcat - function that concatenates two strings
  *@s1: first string
  *@s2: second string
- *@n: size
- * Return : 0 Always
+ *@n: size of charachters
+ * Return : new string, or null
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	unsigned int l, t, i;
+	char *ptr, *ret;
+	unsigned int len1, len2, i;
 
-	if (s1 == NULL)
+	if (!s1)
 		s1 = "";
-	if (s2 == NULL)
+	if (!s2)
 		s2 = "";
-	t = _strlen(s1);
-	l = _strlen(s2);
-	if (n < 1)
-		l = n;
-	str = malloc(t + l + 1);
-	if (str == NULL)
+	for (len1 = 0; ptr = s1; ptr++)
+		len1++;
+	for (len2 = 0; ptr = s2; ptr++)
+		len2++;
+	if (n > len2)
+		n = len2;
+	ret = malloc((len1 + n + 1) * sizeof(char));
+	if (!ret)
 	{
-		return (NULL);
+		return (0);
 	}
-	for (i = 0; i < t; i++)
+	ptr = ret;
+	while (*s1)
 	{
-		*(str + i) = *(s1 + i);
+		*ptr++ = *s1++;
 	}
-	for (i = 0; i < l; i++)
+	i = 0;
+	while (i < n)
 	{
-		*(str + (i + t)) = *(s2 + i);
+		*ptr++ = s2[i++];
 	}
-	*(str + (i + t)) = '\0';
-	return (str);
+	*ptr = 0;
+	return (ret);
 }
